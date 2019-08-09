@@ -39,7 +39,7 @@ const RootQuery = new GraphQLObjectType({
     posts: {
       type: new GraphQLList(PostType),
       resolve(parent, args) {
-        return Post.find();
+        return Post.find().sort({ date: 'descending' });
       }
     }
   }
