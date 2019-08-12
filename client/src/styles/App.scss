@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Posts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+
+  ul {
+    margin-top: 25px;
+    list-style: none;
+    width: 100%;
+  }
+
+  li {
+    margin: 5px 0 0 0;
+
+    height: 150px;
+  }
+}
+
+.NewPost {
+  background: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    background: lightblue;
+    width: 500px;
+    overflow-wrap: break-word;
+  }
+
+  #title {
+    width: 250px;
+  }
+  #description {
+    height: 150px;
+    width: 500px;
+    resize: none;
+  }
+  #submit {
+    background-color: white;
+    border: 3px rgb(247, 66, 53) solid;
+    height: 45px;
+    width: 100px;
+    //font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
