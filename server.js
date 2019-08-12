@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const expressGraphQL = require('express-graphql');
 const schema = require('./schema');
 const apiRoute = require('./routes/api');
+const path = require('path');
 
 require('dotenv/config');
 
@@ -21,6 +22,12 @@ app.use(
     graphiql: true
   })
 );
+
+app.use(express.static('public'));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+});
 
 // connect to db
 mongoose.connect(
